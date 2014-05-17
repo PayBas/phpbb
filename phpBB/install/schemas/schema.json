@@ -800,6 +800,11 @@
                 "UINT:20",
                 0
             ],
+            "display_subforum_limit": {
+                "0": "BOOL",
+                "1": 0,
+                "after": "display_subforum_list"
+            },
             "enable_shadow_prune": [
                 "BOOL",
                 0
