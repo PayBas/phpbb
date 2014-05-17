@@ -267,7 +267,7 @@ function display_forums($root_data = '', $display_moderators = true, $return_mod
 		}
 		else if ($row['forum_type'] != FORUM_CAT)
 		{
-			$subforums[$parent_id][$forum_id]['display'] = ($row['display_on_index']) ? true : false;
+			$subforums[$parent_id][$forum_id]['display'] = ($row['display_on_index'] && (!$row['display_subforum_limit'] && $parent_id == $row['parent_id'])) ? true : false;
 			$subforums[$parent_id][$forum_id]['name'] = $row['forum_name'];
 			$subforums[$parent_id][$forum_id]['orig_forum_last_post_time'] = $row['forum_last_post_time'];
 			$subforums[$parent_id][$forum_id]['children'] = array();
