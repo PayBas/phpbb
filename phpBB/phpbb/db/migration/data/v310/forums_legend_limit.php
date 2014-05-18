@@ -2,7 +2,7 @@
 /**
 *
 * @package migration
-* @copyright (c) 2012 phpBB Group
+* @copyright (c) 2014 phpBB Group
 * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
 *
 */
@@ -18,7 +18,7 @@ class forums_legend_limit extends \phpbb\db\migration\migration
 
 	static public function depends_on()
 	{
-		return array('\phpbb\db\migration\data\v310\dev');
+		return array('\phpbb\db\migration\data\v310\beta3');
 	}
 
 	public function update_schema()
