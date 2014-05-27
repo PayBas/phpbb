@@ -502,7 +502,7 @@ fieldset.display-actions {
 	p.responsive-center {
 		float: none;
 		text-align: center;
-		margin: 0;
+		margin-bottom: 0.5em;
 	}
 
 	.action-bar > .pagination, fieldset.jumpbox {
