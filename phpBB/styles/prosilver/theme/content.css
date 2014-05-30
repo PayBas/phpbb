@@ -236,11 +236,6 @@ dd.option {
 div[class].topic-actions {
 	height: auto;
 }
-.topic-actions:after {
-	content: '';
-	clear: both;
-	display: block;
-}
 
 .topic-actions:after {
 	content: '';
