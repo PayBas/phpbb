@@ -11,16 +11,16 @@
 	<div class="inner">
 
 	<!-- IF .pagination or TOTAL_TOPICS -->
-		<ul class="linklist">
-			<li class="rightside pagination">
-				<!-- IF TOTAL_TOPICS --> {TOTAL_TOPICS} &bull; <!-- ENDIF -->
-				<!-- IF .pagination --> 
-					<!-- INCLUDE pagination.html -->
-				<!-- ELSE --> 
-					{PAGE_NUMBER}
-				<!-- ENDIF -->
-			</li>
-		</ul>
+	<div class="action-bar">
+		<div class="pagination">
+			<!-- IF TOTAL_TOPICS -->{TOTAL_TOPICS}<!-- ENDIF -->
+			<!-- IF .pagination --> 
+				<!-- INCLUDE pagination.html -->
+			<!-- ELSE --> 
+				 &bull; {PAGE_NUMBER}
+			<!-- ENDIF -->
+		</div>
+	</div>
 	<!-- ENDIF -->
 
 	<!-- IF .topicrow -->
@@ -95,8 +95,6 @@
 	<!-- ENDIF -->
 
 	<fieldset class="display-options">
-		<!-- IF U_NEXT_PAGE --><a href="{U_NEXT_PAGE}" class="right-box arrow-{S_CONTENT_FLOW_END}">{L_NEXT}</a><!-- ENDIF -->
-		<!-- IF U_PREVIOUS_PAGE --><a href="{U_PREVIOUS_PAGE}" class="left-box arrow-{S_CONTENT_FLOW_BEGIN}">{L_PREVIOUS}</a><!-- ENDIF -->
 		<label>{L_DISPLAY_TOPICS}{L_COLON} {S_SELECT_SORT_DAYS}</label>
 		<label>{L_SORT_BY} {S_SELECT_SORT_KEY}</label>
 		<label>{S_SELECT_SORT_DIR}</label>
@@ -106,16 +104,16 @@
 	<hr />
 
 	<!-- IF .pagination or TOTAL_TOPICS -->
-		<ul class="linklist">
-			<li class="rightside pagination">
-				<!-- IF TOTAL_TOPICS --> {TOTAL_TOPICS} &bull; <!-- ENDIF -->
-				<!-- IF .pagination --> 
-					<!-- INCLUDE pagination.html -->
-				<!-- ELSE --> 
-					{PAGE_NUMBER}
-				<!-- ENDIF -->
-			</li>
-		</ul>
+	<div class="action-bar">
+		<div class="pagination">
+			<!-- IF TOTAL_TOPICS -->{TOTAL_TOPICS}<!-- ENDIF -->
+			<!-- IF .pagination --> 
+				<!-- INCLUDE pagination.html -->
+			<!-- ELSE --> 
+				 &bull; {PAGE_NUMBER}
+			<!-- ENDIF -->
+		</div>
+	</div>
 	<!-- ENDIF -->
 
 	</div>
