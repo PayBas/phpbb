@@ -45,23 +45,8 @@ hr {
 	border-color: #C7C3BF;
 }
 
-.search-box input.button {
+.search-box button.search:before {
 	background-image: url("./images/icon_textbox_search.gif");
-	background-image: url("./images/icon_textbox_search.gif"), -moz-linear-gradient(top, #FFFFFF, #E9E9E9);
-	background-image: url("./images/icon_textbox_search.gif"), -webkit-linear-gradient(top, #FFFFFF, #E9E9E9);
-	background-image: url("./images/icon_textbox_search.gif"), -o-linear-gradient(top, #FFFFFF, #E9E9E9);
-	background-image: url("./images/icon_textbox_search.gif"), linear-gradient(to bottom, #FFFFFF, #E9E9E9);
-	background-position: 50% 50%, 0 0;
-	background-repeat: no-repeat, repeat;
-	-ms-filter: "none";
-}
-.search-box input.button:hover {
-	background-image: url("./images/icon_textbox_search.gif");
-	background-image: url("./images/icon_textbox_search.gif"), -moz-linear-gradient(top, #E9E9E9, #FFFFFF);
-	background-image: url("./images/icon_textbox_search.gif"), -webkit-linear-gradient(top, #E9E9E9, #FFFFFF);
-	background-image: url("./images/icon_textbox_search.gif"), -o-linear-gradient(top, #E9E9E9, #FFFFFF);
-	background-image: url("./images/icon_textbox_search.gif"), linear-gradient(to bottom, #E9E9E9, #FFFFFF);
-	-ms-filter: "none";
 }
 
 /* Round cornered boxes and backgrounds

@@ -386,17 +386,24 @@ input.button1:focus, input.button2:focus, input.button3:focus {
 	box-sizing: border-box;
 }
 
-.search-box input.button {
+.search-box button.search {
 	border-radius: 0;
 	float: left;
-	font-weight: normal;
+	font-size: 0;
 	height: 24px;
 	margin: 0;
 	overflow: hidden;
 	padding: 3px;
 	position: relative;
-	text-indent: -5000px;
 	width: 30px;
+}
+
+.search-box button.search:before {
+	background: transparent 50% 50% no-repeat;
+	content: '';
+	display: inline-block;
+	height: 14px;
+	width: 16px;
 }
 
 .search-box a.button {
