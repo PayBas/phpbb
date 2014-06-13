@@ -218,3 +218,9 @@ ul.linklist.bulletin li.small-icon:before {
 .hasjs .postbody .post-buttons {
 	max-width: 40%;
 }
+
+/* Browser-specific tweaks */
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0
+}
