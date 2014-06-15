@@ -512,7 +512,7 @@ fieldset.display-actions {
 		margin-bottom: 5px;
 	}
 
-	.topic-actions .buttons, .topic-actions .topic-tools, .topic-actions .search-box {
+	.action-bar > div {
 		margin-bottom: 5px;
 	}
 
