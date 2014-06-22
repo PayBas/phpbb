@@ -29,6 +29,7 @@ hr {
 /* Search box
 --------------------------------------------- */
 #search-box {
+	background-color: #cadceb;
 	box-shadow: 0 0 10px #0075B0;
 }
 
