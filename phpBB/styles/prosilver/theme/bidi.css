@@ -29,18 +29,8 @@
 --------------------------------------------- */
 .rtl #search-box {
 	float: left;
-	text-align: left;
 	margin-right: 0;
 	margin-left: 5px;
-}
-
-.rtl #search-box li {
-	text-align: left;
-}
-
-.rtl #search-box img {
-	margin-right: 0;
-	margin-left: 3px;
 }
 
 .rtl #site-description {
@@ -881,6 +871,7 @@ ul.linklist li.small-icon > a, ul.linklist li.breadcrumbs span:first-child > a {
 	border-left-width: 1px;
 	border-right-width: 0;
 	border-radius: 4px 0 0 4px;
+	float: right;
 }
 
 .rtl .search-box a.button:before {
