@@ -375,7 +375,6 @@ input.button1:focus, input.button2:focus, input.button3:focus {
 
 .search-box .inputbox {
 	background-image: none;
-	border: 1px solid transparent;
 	border-right-width: 0;
 	border-radius: 4px 0 0 4px;
 	float: left;
@@ -386,7 +385,7 @@ input.button1:focus, input.button2:focus, input.button3:focus {
 	box-sizing: border-box;
 }
 
-.search-box button.search {
+.search-box button.search-icon {
 	border-radius: 0;
 	float: left;
 	font-size: 0;
@@ -396,7 +395,7 @@ input.button1:focus, input.button2:focus, input.button3:focus {
 	position: relative;
 }
 
-.search-box button.search:before {
+.search-box button.search-icon:before {
 	margin: 0 3px;
 	height: 14px;
 	width: 16px;
