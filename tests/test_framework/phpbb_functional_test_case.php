@@ -1067,4 +1067,25 @@ class phpbb_functional_test_case extends phpbb_mink_test_case
 
 		return $manager;
 	}
+
+	/**
+	* Get quickmod page
+	*
+	* @param int $topic_id
+	* @param string $action	Language key for the quickmod action
+	* @param Symfony\Component\DomCrawler\Crawler Optional crawler object to use instead of creating new one.
+	* @return Symfony\Component\DomCrawler\Crawler
+	*/
+	public function get_quickmod_page($topic_id, $action, $crawler = false)
+	{
+		$this->add_lang('viewtopic');
+
+		if ($crawler === false)
+		{
+			$crawler = self::request('GET', "viewtopic.php?t={$topic_id}&sid={$this->sid}");
+		}
+		$link = $crawler->filter('#quickmod')->selectLink($this->lang($action))->link()->getUri();
+
+		return self::request('GET', substr($link, strpos($link, 'mcp.')));
+	}
 }

@@ -442,6 +442,14 @@ ul.linklist.bulletin > li.no-bulletin:before {
 	position: relative;
 }
 
+.dropdown-container-right {
+	float: right;
+}
+
+.dropdown-container-left {
+	float: left;
+}
+
 .nojs .dropdown-container:hover .dropdown {
 	display: block !important;
 }
@@ -563,6 +571,14 @@ ul.linklist.bulletin > li.no-bulletin:before {
 
 .dropdown li:first-child, .dropdown li.separator + li, .dropdown li li {
 	border-top: 0;
+}
+
+.dropdown-contents > li {
+	padding-right: 15px;
+}
+
+.dropdown-nonscroll > li {
+	padding-right: 0;
 }
 
 .dropdown li li:first-child {
@@ -1053,6 +1069,14 @@ p.post-notice:before {
 
 form > p.post-notice strong {
 	line-height: 20px;
+}
+
+#jumpbox {
+	margin: 5px 0;
+}
+
+.stat-block {
+	clear: both;
 }
 
 #top {
