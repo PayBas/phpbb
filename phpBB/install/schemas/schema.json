@@ -796,6 +796,10 @@
                 "BOOL",
                 1
             ],
+            "display_subforum_limit": [
+                "BOOL",
+                0
+            ],
             "forum_options": [
                 "UINT:20",
                 0
