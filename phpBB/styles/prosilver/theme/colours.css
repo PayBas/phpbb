@@ -28,17 +28,22 @@ hr {
 
 /* Search box
 --------------------------------------------- */
-
 #search-box {
-	color: #FFFFFF;
+	box-shadow: 0 0 10px #0075B0;
 }
 
-#search-box #keywords {
-	background-color: #FFF;
+#search-box .inputbox:hover,
+#search-box .inputbox:focus,
+#search-box .button:hover {
+	border-color: #C7C3BF;
 }
 
-#search-box input {
-	border-color: #0075B0;
+.search-box .inputbox {
+	border-color: #C7C3BF;
+}
+
+.search-box button.search-icon:before {
+	background-image: url("./images/icon_textbox_search.gif");
 }
 
 /* Round cornered boxes and backgrounds
@@ -246,19 +251,19 @@ a:hover	{ color: #D31141; }
 a:active	{ color: #368AD2; }
 
 /* Links on gradient backgrounds */
-#search-box a:link, .navbg a:link, .forumbg .header a:link, .forabg .header a:link, th a:link {
+.navbg a:link, .forumbg .header a:link, .forabg .header a:link, th a:link {
 	color: #FFFFFF;
 }
 
-#search-box a:visited, .navbg a:visited, .forumbg .header a:visited, .forabg .header a:visited, th a:visited {
+.navbg a:visited, .forumbg .header a:visited, .forabg .header a:visited, th a:visited {
 	color: #FFFFFF;
 }
 
-#search-box a:hover, .navbg a:hover, .forumbg .header a:hover, .forabg .header a:hover, th a:hover {
+.navbg a:hover, .forumbg .header a:hover, .forabg .header a:hover, th a:hover {
 	color: #A8D8FF;
 }
 
-#search-box a:active, .navbg a:active, .forumbg .header a:active, .forabg .header a:active, th a:active {
+.navbg a:active, .forumbg .header a:active, .forabg .header a:active, th a:active {
 	color: #C8E6FF;
 }
 
