@@ -49,50 +49,43 @@ class lang_helper
 	}
 
 	/**
-	* Loads preview options into language entries for options
-	*
-	* @param	int		$field_id
-	* @param	int		$lang_id
-	* @param	mixed	$preview_options
+	* Get language entries for options and store them here for later use
 	*/
-	public function load_preview_options($field_id, $lang_id, $preview_options)
+	public function get_option_lang($field_id, $lang_id, $field_type, $preview_options)
 	{
-		$lang_options = (!is_array($preview_options)) ? explode("\n", $preview_options) : $preview_options;
-
-		foreach ($lang_options as $num => $var)
+		if ($preview_options !== false)
 		{
-			if (!isset($this->options_lang[$field_id]))
-			{
-				$this->options_lang[$field_id] = array();
-			}
-			if (!isset($this->options_lang[$field_id][$lang_id]))
-			{
-				$this->options_lang[$field_id][$lang_id] = array();
-			}
-			$this->options_lang[$field_id][$lang_id][($num + 1)] = $var;
-		}
-	}
+			$lang_options = (!is_array($preview_options)) ? explode("\n", $preview_options) : $preview_options;
 
-	/**
-	* Fetches language entries for options from DB
-	*
-	* @param	int		$lang_id
-	*/
-	public function load_option_lang($lang_id)
-	{
-		$sql = 'SELECT field_id, option_id, lang_value
+			foreach ($lang_options as $num => $var)
+			{
+				if (!isset($this->options_lang[$field_id]))
+				{
+					$this->options_lang[$field_id] = array();
+				}
+				if (!isset($this->options_lang[$field_id][$lang_id]))
+				{
+					$this->options_lang[$field_id][$lang_id] = array();
+				}
+				$this->options_lang[$field_id][$lang_id][($num + 1)] = $var;
+			}
+		}
+		else
+		{
+			$sql = 'SELECT option_id, lang_value
 				FROM ' . $this->language_table . '
-				WHERE lang_id = ' . (int) $lang_id . "
+					WHERE field_id = ' . (int) $field_id . '
+					AND lang_id = ' . (int) $lang_id . "
+					AND field_type = '" . $this->db->sql_escape($field_type) . "'
 				ORDER BY option_id";
+			$result = $this->db->sql_query($sql);
 
-		$result = $this->db->sql_query($sql);
-
-		while ($row = $this->db->sql_fetchrow($result))
-		{
-			$this->options_lang[$row['field_id']][$lang_id][($row['option_id'] + 1)] = $row['lang_value'];
+			while ($row = $this->db->sql_fetchrow($result))
+			{
+				$this->options_lang[$field_id][$lang_id][($row['option_id'] + 1)] = $row['lang_value'];
+			}
+			$this->db->sql_freeresult($result);
 		}
-
-		$this->db->sql_freeresult($result);
 	}
 
 	/**
